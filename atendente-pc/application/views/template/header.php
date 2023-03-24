@@ -23,9 +23,9 @@
 			<img src="<?php echo base_url('public/img/logo.png'); ?>" title="logo" alt="logo">
 			<div id="menu">
 				<a href="?pagina=cardapio">CARDÁPIO</a>
-				<a href="?pagina=menu">MENU</a>
-				<?php if(isset($_SESSION['login'])) { ?>
-					<a href="logout.php"><?php echo 'SAIR' ?></a>
+				<a href="menu">MENU</a>
+				<?php if(isset($_SESSION['username'])) { ?>
+					<a href="home/logoff"><?php echo 'SAIR' ?></a>
 				<?php } ?>
 			</div>
 			<div id="MyClockDisplay" onload="showTime()" style="color: white;font-family: Orbitron;font-size: 20px;margin-left: 15px;margin-top: 10px">
@@ -35,9 +35,9 @@
 			<div style="color: white;font-family: Orbitron;font-size: 20px;margin-left: 18px">
 				<label><?php echo date('d/m/Y')?></label>
 			</div>
-			<?php if(isset($_SESSION['login'])) { ?>
+			<?php if(isset($_SESSION['username'])) { ?>
 				<div style="color: white;font-family: Orbitron;font-size: 20px;margin-left: 9px" >
-					<label>Func:<?php echo $_SESSION['usuario'] ?></label>
+					<label>Func:<?php echo $_SESSION['username'] ?></label>
 				</div>
 			<?php } ?>
 			
