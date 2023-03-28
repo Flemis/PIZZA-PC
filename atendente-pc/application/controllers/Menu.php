@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Menu extends CI_Controller {
 
+	public function __construct() {
+		parent::__construct();
+		$this->load->library("session");
+	}
+
 	public function index(){
 		$this->load->library("session");
 		$name = $this->session->userdata('username');
@@ -12,4 +17,5 @@ class Menu extends CI_Controller {
 			header("Location: " . base_url() . "home");
 		}
 	}
+
 }

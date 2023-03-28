@@ -1,8 +1,8 @@
 
-*{margin: 0;padding: 0};
+*{margin: 0;padding: 0; font-family: 'Rubik', sans-serif;};
 
 
-body{ height: 100px; font-family: cursive; font-size: 16px}
+body{ height: 100px; font-size: 16px}
 header{ height: 150px;background-color: #1F3E0F; }
 
 footer {
@@ -19,13 +19,16 @@ footer {
 
 #conteudo {
 	padding: 30px 0;
-	font-family: cursive; font-size: 16px;
+	font-size: 16px;
+}
+
+#dt_clients {
+	background-color: white;
 }
 
 #menu {
 	text-align: center;
 	color: black;
-	font-family: cursive;
 	float: right;
 	padding: 50px 0;
 }
@@ -52,10 +55,16 @@ footer {
 }
 
 .divbutton {
-	font-family: cursive;
-	font-size: 40px;
+	font-size: 35px;
 	cursor: pointer;
+	padding: 5px;
+	transition: all 0.2s ease-in-out;
+	border-radius: 9px;
+}
 
+.divbutton:hover{
+	color: white;
+	transform: scale(1.2);
 }
 
 .containermenu {

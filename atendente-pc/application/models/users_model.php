@@ -21,4 +21,11 @@ class Users_model extends CI_Model{
 			return NULL;
 		}
 	}
+
+	public function get_clients(){
+
+		$this->db->from("cliente");
+
+		return $this->db->get()->result_array();
+	}
 }
